@@ -9,10 +9,41 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg">
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header">
+      <h1 class="header__title"> 
+        &lt;/HTML&gt; 
+      </h1>
+      <p class="header__text">
+        закрывающий тег
+      </p>
+    </header>
+    <main class="main">
+      <article class="memories-block">
+        <h2 class="memories-block__title"></h2>
+        <figure class="memories-block__image">
+          <h3 class="memories-block__image-title"></h3>
+          <img 
+            src="./images/image_car.png"
+            alt="Нарисованное изображение фургона мороженщика без дополнительных эфектов"
+            class="memories-block__image-pictures"
+            loading="lazy"
+          />
+        </figure>
+        <button class="button memories-block__button">
+          <span>Like</span>
+        </button>
+      </article>
+    </main>
+    <footer class="footer">
+      <button>
+        <span>
+          Сохранить на память
+        </span>
+      </button>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
