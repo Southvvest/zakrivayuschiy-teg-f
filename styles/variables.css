@@ -1,8 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
+    --bg-image: url(../images/background.png);
     --font-family-basic: 'Inter', sans-serif;
-    --font-family-decoratio: 'PressStart2P', sans-serif;
+    --font-family-decoration: 'PressStart2P', sans-serif;
     --font-weight-title: 700;
     --font-weight-text: 400;
+    --font-size-logo-title: 49px;
+    --font-size-logo-text: 14px;
+    --page-weighe-size: 100%;
+    --border-element: 2px solid #000;
 }

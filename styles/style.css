@@ -13,6 +13,86 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+
   font-family: var(--font-family-basic), sans-serif;
   font-variation-settings: var(--font-weight-text);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+/* Стили для шапки страницы */
+
+.header {
+  inline-size: var(--page-weight-size);
+  padding-block-start: 100px;
+  padding-block-end: 100px;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-block-size: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
+  min-inline-size: clamp(20.438rem, 0rem + 100vw, 23rem);
+  font-family: var(--font-family-decoration), sans-serif;
+  border: var(--border-element);
+}
+
+.header__title {
+  /* font-family: inherit; */
+  font-weight: 400;
+  font-size: var(--font-size-logo-title);
+}
+
+.header__text {
+  /* font-family: inherit; */
+  font-size: var(--font-size-logo-text);
+}
+
+/* Конец стилей шапки страницы */
+
+
+/* Блок стилей для основного контента страницы */
+
+.memories-block {
+  background-color: #fff;
+  border: var(--border-element);
+}
+
+.memories-block__title {
+  /* border: var(--border-element); */
+}
+
+.memories-block__image {
+  border: var(--border-element);
+  border-left: none;
+  border-right: none;
+  position: relative;
+}
+
+.memories-block__image-title {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.memories-block__image-pictures {
+  max-block-size: 100%;
+  max-inline-size: 100%;
+  object-fit: cover;
+}
+
+.memories-block__text {
+  padding-inline: 25px;
+  padding-block: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+
+/* Конец блока стилей с основным контентом */
