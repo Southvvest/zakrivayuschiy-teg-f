@@ -2,12 +2,20 @@
 
 :root {
     --bg-image: url(../images/background.png);
+    --bg-color: #fff;
+    --inline-size-small: clamp(23.438rem, 0rem + 100vw, 43.5rem);
+    --inline-size-large: clamp(43.5rem, 0rem + 100vw, 43.75rem);
     --font-family-basic: 'Inter', sans-serif;
     --font-family-decoration: 'PressStart2P', sans-serif;
+    --font-logo-title: clamp(3.063rem, 188.563rem + -800vh, 4.063rem);
+    --font-logo-text: clamp(0.875rem, 105.219rem + -450vh, 1.438rem);
     --font-weight-title: 700;
     --font-weight-text: 400;
-    --font-size-logo-title: 49px;
-    --font-size-logo-text: 14px;
+    --font-size-title: 18px;
+    --font-size-text: 18px;
+    --font-size-button: 14px;
+    --font-height-title: 21.78px;
+    --font-height-text: 21px;
     --page-weighe-size: 100%;
     --border-element: 2px solid #000;
 }
