@@ -174,6 +174,7 @@
 /* Блок для стилей подвала страницы */
 
 .footer{
+  display: grid;
   padding-block-start: clamp(3.25rem, 0rem + 100vh, 3.125rem);
   padding-block-end: clamp(6.25rem, 0rem + 100vh, 6.438rem);
   min-inline-size: var(--inline-size-small);
@@ -187,6 +188,8 @@
   border: var(--border-element);
   justify-self: center;
   flex-direction: column;
+  padding-block-start: 12px;
+  gap: 0;
 }
 
 .footer-button .button__text {
@@ -194,3 +197,8 @@
 }
 
 /* Конец стилей подвала страницы */
+
+
+.floppy {
+  fill: #000;
+}
