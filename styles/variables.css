@@ -9,8 +9,8 @@
     --font-family-decoration: 'PressStart2P', sans-serif;
     --font-logo-title: clamp(3.063rem, 188.563rem + -800vh, 4.063rem);
     --font-logo-text: clamp(0.875rem, 105.219rem + -450vh, 1.438rem);
-    --font-weight-title: 700;
-    --font-weight-text: 400;
+    --font-weight-big: 700;
+    --font-weight-small: 400;
     --font-size-title: 18px;
     --font-size-text: 18px;
     --font-size-button: 14px;

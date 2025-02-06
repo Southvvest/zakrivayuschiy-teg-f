@@ -293,7 +293,7 @@
     </main>
     <footer class="footer">
       <button class="button footer-button">
-        <svg id="floppy" viewBox="0 0 39 39" class="floppy" width="28" height="28">
+        <svg id="floppy" viewBox="0 0 39 39" class="floppy button-floppy">
           <use href="./svg/floppy.svg#floppy">
         </svg>
         <span class="button__text">
@@ -302,5 +302,16 @@
       </button>
     </footer>
     <script src="./scripts/like.js"></script>
+    <dialog open class="dialog">
+      <div class="dialog-messege">
+        <svg id="floppy" viewBox="0 0 39 39" class="floppy dialog-floppy">
+          <use href="./svg/floppy.svg#floppy">
+        </svg>
+        <span class="dialog-text">
+          Вставьте дискету, чтобы продолжить
+        </span>
+      </div>
+      <button class="button dialog-button">ok</button>
+    </dialog>
   </body>
 </html>
