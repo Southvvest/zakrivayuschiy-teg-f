@@ -83,9 +83,9 @@
           </p>
         </div>        
         <div class="memories-block__button">
-          <button class="button">
-            <img src="./svg/heart.svg" alt="heart icon">
-            <span class="button__text">Like</span>
+          <button class="button card__icon-button">
+            <img src="./svg/heart.svg" alt="heart icon" class="like-icon">
+            <span class="button__text card__like-button">Like</span>
           </button>
         </div>   
       </article>
@@ -115,9 +115,9 @@
           </p>
         </div>        
         <div class="memories-block__button">
-          <button class="button">
-            <img src="./svg/heart.svg" alt="heart icon">
-            <span class="button__text">Like</span>
+          <button class="button card__icon-button">
+            <img src="./svg/heart.svg" alt="heart icon" class="like-icon">
+            <span class="button__text card__like-button">Like</span>
           </button>
         </div>   
       </article>
@@ -149,9 +149,9 @@
           </p>
         </div>        
         <div class="memories-block__button">
-          <button class="button">
-            <img src="./svg/heart.svg" alt="heart icon">
-            <span class="button__text">Like</span>
+          <button class="button card__icon-button">
+            <img src="./svg/heart.svg" alt="heart icon" class="like-icon">
+            <span class="button__text card__like-button">Like</span>
           </button>
         </div>   
       </article>
@@ -183,9 +183,9 @@
           </p>
         </div>        
         <div class="memories-block__button">
-          <button class="button">
-            <img src="./svg/heart.svg" alt="heart icon">
-            <span class="button__text">Like</span>
+          <button class="button card__icon-button">
+            <img src="./svg/heart.svg" alt="heart icon" class="like-icon">
+            <span class="button__text card__like-button">Like</span>
           </button>
         </div>   
       </article>
@@ -215,9 +215,9 @@
           </p>
         </div>        
         <div class="memories-block__button">
-          <button class="button">
-            <img src="./svg/heart.svg" alt="heart icon">
-            <span class="button__text">Like</span>
+          <button class="button card__icon-button">
+            <img src="./svg/heart.svg" alt="heart icon" class="like-icon">
+            <span class="button__text card__like-button">Like</span>
           </button>
         </div>   
       </article>
@@ -248,9 +248,9 @@
           </p>
         </div>        
         <div class="memories-block__button">
-          <button class="button">
-            <img src="./svg/heart.svg" alt="heart icon">
-            <span class="button__text">Like</span>
+          <button class="button card__icon-button">
+            <img src="./svg/heart.svg" alt="heart icon" class="like-icon">
+            <span class="button__text card__like-button">Like</span>
           </button>
         </div>   
       </article>
@@ -284,15 +284,19 @@
           </p>
         </div>        
         <div class="memories-block__button">
-          <button class="button">
-            <img src="./svg/heart.svg" alt="heart icon">
-            <span class="button__text">Like</span>
+          <button class="button card__icon-button">
+            <img src="./svg/heart.svg" alt="heart icon" class="like-icon">
+            <span class="button__text card__like-button">Like</span>
           </button>
         </div>   
       </article>
     </main>
     <footer class="footer">
-      <button class="button footer-button">
+      <button 
+        type="button"
+        onclick="window['dialog'].showModal()"
+        aria-controls="dialog"
+        class="button footer-button">
         <svg id="floppy" viewBox="0 0 39 39" class="floppy button-floppy">
           <use href="./svg/floppy.svg#floppy">
         </svg>
@@ -302,7 +306,7 @@
       </button>
     </footer>
     <script src="./scripts/like.js"></script>
-    <dialog open class="dialog">
+    <dialog class="dialog" id="dialog">
       <div class="dialog-messege">
         <svg id="floppy" viewBox="0 0 39 39" class="floppy dialog-floppy">
           <use href="./svg/floppy.svg#floppy">
@@ -311,7 +315,12 @@
           Вставьте дискету, чтобы продолжить
         </span>
       </div>
-      <button class="button dialog-button">ok</button>
+      <button
+        type="button"
+        onclick="window['dialog'].close()"
+        class="button dialog-button">
+        ok
+      </button>
     </dialog>
   </body>
 </html>

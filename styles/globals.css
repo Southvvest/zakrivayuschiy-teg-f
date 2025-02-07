@@ -52,21 +52,11 @@ ol {
   white-space: nowrap;
 }
 
-figure {
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  margin: 0px;
-}
-
+figure,
 dialog {
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   margin: 0px;
-  padding-block: 0px;
-  padding-inline: 0px;
-  border: none;
 }

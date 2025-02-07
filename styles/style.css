@@ -1,12 +1,12 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ like-icon — для svg-иконки анимированного сердца +
+✦ card__like-button — для кнопки Like рядом с иконкой +
+✦ card__icon-button — для кнопки, оборачивающей иконку +
+✦ card__icon-button — для кнопки, оборачивающей иконку +
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+✦ button__text — для обозначения текстового элемента внутри кнопки +
 
 */
 
@@ -210,22 +210,21 @@
 
 /* Блок стилей для всплывающего окна */
 
-.dialog {
+.dialog[open] {
   display: flex;
   flex-direction: column;
   justify-self: center;
-  /* justify-content: flex-end; */
-  align-self: anchor-center;
+  top: calc(50% - 102px);
   border: var(--border-element);
   font-size: var(--font-size-button);
   min-inline-size: clamp(20.938rem, 0rem + 100vw, 21.313rem);
   max-inline-size: clamp(15.063rem, 0rem + 100vw, 15.813rem);
-  min-block-size: clamp(12.125rem, 0rem + 100vh, 12.188rem);
+  min-block-size: clamp(11.563rem, 0rem + 100vh, 11.938rem);
+  /* max-block-size: clamp(11.875rem, 0rem + 100vh, 12rem); */
   padding-inline: clamp(2.438rem, 0rem + 100vw, 2.5rem);
   padding-block: clamp(1.75rem, 0rem + 100vh, 1.875rem);
   font-family: var(--font-family-decoration, sans-serif);
   gap: 30px;
-  text-transform: uppercase;
 }
 
 .dialog-messege {
@@ -239,7 +238,6 @@
   width: 39px;
   height: 39px;
   align-self: center;
-  text-transform: uppercase;
 }
 
 .dialog .button__text {
@@ -250,9 +248,24 @@
 .dialog-button {
   justify-content: center;
   border: var(--border-element);
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   min-inline-size: 100%;
   min-block-size: clamp(2.313rem, 0rem + 100vh, 2.375rem);;
+}
+
+.dialog-text {
+  text-transform: uppercase;
+  line-height: var(--font-height-text);
+  /* padding-inline: clamp(2.438rem, 0rem + 100vw, 2.5rem); */
+}
+
+.dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 75%);
+  /* backdrop-filter: opacity(75%); */
+}
+
+body:has(.dialog[open]) {
+  overflow: hidden;
 }
 
 /* Конец блока стилей для всплывающего окна */
@@ -287,6 +300,13 @@
   .button-floppy {
     width: 21px;
     height: 21px;
+  }
+  .dialog {
+    max-inline-size: clamp(22.063rem, 0rem + 100vw, 22.188rem);
+    padding-inline: clamp(1.75rem, 0rem + 100vw, 1.875rem);
+  }
+  .dialog-messege {
+    max-inline-size: clamp(18.125rem, 0rem + 100vw, 18.313rem);
   }
 }
 
