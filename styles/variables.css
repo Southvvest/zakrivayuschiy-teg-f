@@ -1,7 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-    --bg-image: url(../images/background.png);
+    --bg-image:
+      repeating-linear-gradient(90deg, #d3d3d3ff, #d3d3d3ff 2px, #d3d3d300 2px, #d3d3d300 4px),
+      repeating-linear-gradient(0deg,#d3d3d3ff,  #d3d3d3ff 2px, #d3d3d300 2px, #d3d3d300  4px),
+      repeating-linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a);
     --bg-color: #fff;
     --inline-size-small: clamp(23.438rem, 0rem + 100vw, 43.5rem);
     --inline-size-large: clamp(43.5rem, 0rem + 100vw, 43.75rem);
