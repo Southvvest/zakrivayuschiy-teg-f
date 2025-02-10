@@ -25,24 +25,28 @@
 
 .button {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: center;
-  gap: 12px;
-  border: none;
+  /* gap: 12px; */
+  /* border: none; */
+  font-family: var(--font-family-decoration);
+  font-size: var(--font-size-button);
   background-color: inherit;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .button__text {
-  font-family: var(--font-family-decoration);
-  font-size: var(--font-size-button);
   border: var(--border-element);
+  color: var(--bg-color, #fff);
   min-inline-size: 130px;
   min-block-size: clamp(2.313rem, 0rem + 100vh, 2.375rem);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  mix-blend-mode: difference;
   /* display: block;
   justify-self: center;
   align-self: center; */
@@ -50,7 +54,7 @@
 
 .card__icon-button {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: center;
   gap: 12px;
   border: none;
@@ -164,6 +168,17 @@
   object-fit: cover;
 }
 
+.like-icon-button {
+  border: none;
+  background-color: inherit;
+}
+
+.like-icon {
+  /* min-block-size: 38px;
+  min-inline-size: 38px; */
+  cursor: pointer;
+}
+
 .memories-block__text {
   padding-inline: 25px;
   padding-block: 25px;
@@ -180,6 +195,8 @@
   display: flex;
   justify-content: flex-end;
 }
+
+
 
 /* Конец блока стилей с основным контентом */
 
@@ -200,9 +217,11 @@
   background-color: var(--bg-color);
   border: var(--border-element);
   justify-self: center;
+  justify-content: center;
   flex-direction: column;
-  padding-block-start: 12px;
-  gap: 0;
+  padding-block: 0px;
+  z-index: 1;
+  /* gap: 0; */
 }
 
 .footer-button .button__text {
@@ -216,6 +235,8 @@
 .button-floppy {
   width: 28px;
   height: 28px;
+  fill: var(--bg-color, #fff);
+  mix-blend-mode: difference;
 }
 
 /* Конец стилей подвала страницы */
@@ -238,6 +259,7 @@
   padding-block: clamp(1.75rem, 0rem + 100vh, 1.875rem);
   font-family: var(--font-family-decoration, sans-serif);
   gap: 30px;
+  overflow: hidden;
 }
 
 .dialog-messege {
@@ -254,16 +276,17 @@
 }
 
 .dialog .button__text {
-  border: none;
+  /* border: none; */
   line-height: var(--font-height-text);
 }
 
 .dialog-button {
-  justify-content: center;
+  /* justify-content: center; */
   border: var(--border-element);
   text-transform: uppercase;
   min-inline-size: 100%;
-  min-block-size: clamp(2.313rem, 0rem + 100vh, 2.375rem);;
+  min-block-size: clamp(2.313rem, 0rem + 100vh, 2.375rem);
+  justify-content: center;
 }
 
 .dialog-text {
@@ -357,12 +380,14 @@ body:has(.dialog[open]) {
 }
 
 .footer-button:focus,
-.dialog-button:focus {
+.dialog-button:focus,
+.card__like-button:focus {
   outline: none;
 }
 
 .footer-button:focus-visible,
-.dialog-button:focus-visible {
+.dialog-button:focus-visible,
+.card__like-button:focus-visible {
   box-shadow: 2px 2px #000;
   transition: box-shadow 0.3s;
 }
@@ -373,14 +398,28 @@ body:has(.dialog[open]) {
   inline-size: 100%;
   block-size: 100%;
   position: absolute;
+  /* z-index: -1; */
   left: -100%;
 }
 
 .button:hover::before {
-  content: "";
-  background-color: #000;
+  /* content: ""; */
+  /* background-color: #000; */
   transform: scaleX(5);
   transition: transform 0.5s ease-in-out;
+}
+
+.like-icon-button:focus {
+  outline: none;
+}
+
+.like-icon-button:focus-visible {
+  border: var(--border-element);
+  transition: border 0.3s;
+}
+
+#sparks {
+  opacity: 0;
 }
 
 /* Конец блока визуальных эфектов */
