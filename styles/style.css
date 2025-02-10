@@ -30,6 +30,8 @@
   gap: 12px;
   border: none;
   background-color: inherit;
+  position: relative;
+  overflow: hidden;
 }
 
 .button__text {
@@ -44,6 +46,15 @@
   /* display: block;
   justify-self: center;
   align-self: center; */
+}
+
+.card__icon-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  background-color: inherit;
 }
 
 /* Стили для шапки страницы */
@@ -343,6 +354,33 @@ body:has(.dialog[open]) {
 
 .filter-rotete {
   filter: hue-rotate(0.2turn) opacity(75%);
+}
+
+.footer-button:focus,
+.dialog-button:focus {
+  outline: none;
+}
+
+.footer-button:focus-visible,
+.dialog-button:focus-visible {
+  box-shadow: 2px 2px #000;
+  transition: box-shadow 0.3s;
+}
+
+.button::before {
+  content: "";
+  background-color: #000;
+  inline-size: 100%;
+  block-size: 100%;
+  position: absolute;
+  left: -100%;
+}
+
+.button:hover::before {
+  content: "";
+  background-color: #000;
+  transform: scaleX(5);
+  transition: transform 0.5s ease-in-out;
 }
 
 /* Конец блока визуальных эфектов */
