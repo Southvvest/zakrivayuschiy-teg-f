@@ -20,3 +20,8 @@ _____
 Yandex Practicum Фронтенд-разработчик.
 
 https://github.com/Southvvest/zakrivayuschiy-teg-f
+
+
+Ссылка на сайт:
+
+https://southvvest.github.io/zakrivayuschiy-teg-f/
