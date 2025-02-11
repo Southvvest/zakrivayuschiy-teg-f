@@ -154,10 +154,9 @@
   justify-content: flex-end;
 }
 
-.card__icon-button {
+.memories-block__icon-button {
   display: flex;
   align-items: center;
-  /* border: none; ?????????????????????*/
   background-color: inherit;
 }
 
@@ -171,12 +170,11 @@
   cursor: pointer;
 }
 
-.card__like-button {
+.memories-block__like-button {
   min-inline-size: clamp(8rem, 0rem + 100vw, 8.125rem);
   min-block-size: clamp(2.313rem, 0rem + 100vh, 2.375rem);
   justify-content: center;
 }
-
 
 /* Конец блока стилей с основным контентом */
 
@@ -357,13 +355,13 @@ body:has(.dialog[open]) {
 
 .footer-button:focus,
 .dialog-button:focus,
-.card__like-button:focus {
+.memories-block__like-button:focus {
   outline: none;
 }
 
 .footer-button:focus-visible,
 .dialog-button:focus-visible,
-.card__like-button:focus-visible {
+.memories-block__like-button:focus-visible {
   box-shadow: 2px 2px #000;
   transition: box-shadow 0.3s;
 }
@@ -400,12 +398,12 @@ body:has(.dialog[open]) {
   transition: fill 0.3s 0.03s linear;
 }
 
-.like-icon:hover #core {
-  fill: var(--fill-contur-color);
+.like-icon #main-body {
   transition: fill 0.3s linear;
 }
 
-.like-icon #main-body {
+.like-icon:hover #core {
+  fill: var(--fill-contur-color);
   transition: fill 0.3s linear;
 }
 
