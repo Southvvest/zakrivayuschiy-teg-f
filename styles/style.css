@@ -1,12 +1,12 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца +
-✦ card__like-button — для кнопки Like рядом с иконкой +
-✦ card__icon-button — для кнопки, оборачивающей иконку +
-✦ card__icon-button — для кнопки, оборачивающей иконку +
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки +
+✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
 
@@ -16,7 +16,6 @@
   font-family: var(--font-family-basic), sans-serif;
   font-variation-settings: var(--font-weight-small);
   background-image: var(--bg-image);
-  /* background-position: center; */
   background-attachment: fixed;
   background-size: cover;
   display: grid;
@@ -25,10 +24,7 @@
 
 .button {
   display: flex;
-  /* flex-direction: row; */
   align-items: center;
-  /* gap: 12px; */
-  /* border: none; */
   font-family: var(--font-family-decoration);
   font-size: var(--font-size-button);
   background-color: inherit;
@@ -40,25 +36,11 @@
 .button__text {
   border: var(--border-element);
   color: var(--bg-color, #fff);
-  min-inline-size: 130px;
-  min-block-size: clamp(2.313rem, 0rem + 100vh, 2.375rem);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  mix-blend-mode: difference;
-  /* display: block;
-  justify-self: center;
-  align-self: center; */
-}
-
-.card__icon-button {
-  display: flex;
-  /* flex-direction: row; */
-  align-items: center;
-  gap: 12px;
-  border: none;
-  background-color: inherit;
+  mix-blend-mode: difference;  
 }
 
 /* Стили для шапки страницы */
@@ -83,20 +65,13 @@
 }
 
 .header__title {
-  /* font-family: inherit; */
-  /* --font-height-title: 49px; */
   font-weight: 400;
   font-size: var(--font-logo-title);
-  /* line-height: var(--font-height-title); */
 }
 
 .header__text {
-  /* font-family: inherit; */
-  /* --font-height-text: 14px; */
   text-transform: uppercase;
-  /* font-weight: 400; */
   font-size: var(--font-logo-text);
-  /* line-height: var(--font-height-text); */
 }
 
 /* Конец стилей шапки страницы */
@@ -105,7 +80,6 @@
 /* Блок стилей для основного контента страницы */
 
 .main {
-  min-inline-size: var(--inline-size-small);
   max-inline-size: var(--inline-size-large);
   display: flex;
   flex-direction: column;
@@ -115,17 +89,13 @@
 .memories-block {
   background-color: var(--bg-color);
   border: var(--border-element);
-  min-inline-size: 100%;
-  max-inline-size: 100%;
 }
 
 .memories-block__title {
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: var(--font-size-title);
   padding-inline: 10px;
   padding-block: clamp(0.167rem, 0rem + 100vh, 0.278rem);
-  
-  /* border: var(--border-element); */
 }
 
 .memories-block__image {
@@ -135,12 +105,11 @@
   position: relative;
   display: flex;
   max-block-size: clamp(23.438rem, 0rem + 100vi, 43.5rem);
-  min-inline-size: 100%;
 }
 
 .memories-block__image-title {
   position: absolute;
-  right: 13px;
+  right: 11px;
   top: 25px;
   font-family: var(--font-family-decoration), sans-serif;
   --font-size-text: 14px;
@@ -168,34 +137,45 @@
   object-fit: cover;
 }
 
-.like-icon-button {
-  border: none;
-  background-color: inherit;
-}
-
-.like-icon {
-  /* min-block-size: 38px;
-  min-inline-size: 38px; */
-  cursor: pointer;
-}
-
 .memories-block__text {
   padding-inline: 25px;
   padding-block: 25px;
   display: flex;
   flex-direction: column;
   gap: 27px;
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: var(--font-size-text);
 }
 
 .memories-block__button {
-  padding-block-end: 24px;
-  padding-inline-end: 19px;
+  padding-block-end: 22px;
+  padding-inline-end: 25px;
   display: flex;
   justify-content: flex-end;
 }
 
+.card__icon-button {
+  display: flex;
+  align-items: center;
+  /* border: none; ?????????????????????*/
+  background-color: inherit;
+}
+
+.like-icon-button {
+  border: none;
+  background-color: inherit;
+  transform-origin: 0 0;
+}
+
+.like-icon {
+  cursor: pointer;
+}
+
+.card__like-button {
+  min-inline-size: clamp(8rem, 0rem + 100vw, 8.125rem);
+  min-block-size: clamp(2.313rem, 0rem + 100vh, 2.375rem);
+  justify-content: center;
+}
 
 
 /* Конец блока стилей с основным контентом */
@@ -216,12 +196,12 @@
   min-block-size: clamp(5.25rem, 0rem + 100vh, 5.313rem);
   background-color: var(--bg-color);
   border: var(--border-element);
+  gap: 8px;
   justify-self: center;
   justify-content: center;
   flex-direction: column;
   padding-block: 0px;
   z-index: 1;
-  /* gap: 0; */
 }
 
 .footer-button .button__text {
@@ -254,7 +234,6 @@
   min-inline-size: clamp(20.938rem, 0rem + 100vw, 21.313rem);
   max-inline-size: clamp(15.063rem, 0rem + 100vw, 15.813rem);
   min-block-size: clamp(11.563rem, 0rem + 100vh, 11.938rem);
-  /* max-block-size: clamp(11.875rem, 0rem + 100vh, 12rem); */
   padding-inline: clamp(2.438rem, 0rem + 100vw, 2.5rem);
   padding-block: clamp(1.75rem, 0rem + 100vh, 1.875rem);
   font-family: var(--font-family-decoration, sans-serif);
@@ -276,12 +255,10 @@
 }
 
 .dialog .button__text {
-  /* border: none; */
   line-height: var(--font-height-text);
 }
 
 .dialog-button {
-  /* justify-content: center; */
   border: var(--border-element);
   text-transform: uppercase;
   min-inline-size: 100%;
@@ -292,12 +269,10 @@
 .dialog-text {
   text-transform: uppercase;
   line-height: var(--font-height-text);
-  /* padding-inline: clamp(2.438rem, 0rem + 100vw, 2.5rem); */
 }
 
 .dialog[open]::backdrop {
   background-color: rgb(0 0 0 / 75%);
-  /* backdrop-filter: opacity(75%); */
 }
 
 body:has(.dialog[open]) {
@@ -316,14 +291,15 @@ body:has(.dialog[open]) {
   .header__title {
     font-weight: 400;
     --font-logo-title: clamp(3.75rem, 0rem + 100vw, 4.063rem)
-    /* font-size: var(--font-logo-title, clamp(3.75rem, 0rem + 100vw, 4.063rem)); */
   }
   .header__text {
     --font-logo-text: clamp(1.375rem, 0rem + 100vw, 1.438rem);
   }
-
   .memories-block__image {
     max-block-size: clamp(43.625rem, 0rem + 100vh, 43.75rem);
+  }
+  .memories-block__image-title {
+    right: 25px;
   }
   .footer-button {
     min-inline-size: clamp(20.313rem, 0rem + 100vw, 20.938rem);
@@ -398,13 +374,10 @@ body:has(.dialog[open]) {
   inline-size: 100%;
   block-size: 100%;
   position: absolute;
-  /* z-index: -1; */
   left: -100%;
 }
 
 .button:hover::before {
-  /* content: ""; */
-  /* background-color: #000; */
   transform: scaleX(5);
   transition: transform 0.5s ease-in-out;
 }
@@ -414,12 +387,76 @@ body:has(.dialog[open]) {
 }
 
 .like-icon-button:focus-visible {
-  border: var(--border-element);
-  transition: border 0.3s;
+  outline: var(--border-element);
+  outline-offset: -4px;
+  transition: outline 0.3s;
 }
 
 #sparks {
   opacity: 0;
+}
+
+.like-icon #core {
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover #core {
+  fill: var(--fill-contur-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon #main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover #main-body {
+  fill: var(--fill-contur-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active #core {
+  fill: var(--fill-filling-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active #main-body {
+  fill: var(--fill-filling-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked #core {
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon.is-liked #core {
+  fill: var(--fill-filling-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked #main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked #main-body {
+  fill: var(--fill-filling-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked #contour {
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked #contour {
+  fill: var(--fill-filling-color);
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked #heart {
+  animation: move-button-icon 0.3s 0.1s ease-in;
+}
+
+.like-icon.is-liked #sparks {
+  animation: sparks-button-icon 0.3s 0.3s ease-in;
 }
 
 /* Конец блока визуальных эфектов */

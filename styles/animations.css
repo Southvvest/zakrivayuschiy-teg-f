@@ -10,12 +10,20 @@
 
 */
 
-/* @keyframes hover-button-like {
+@keyframes move-button-icon {
     0% {
-        transform: scaleX(0);
-
+        transform: scale(1);
     }
     100% {
-        transform: scaleX(1);
+        transform: scale(1.25);
     }
-} */
+}
+
+@keyframes sparks-button-icon {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
