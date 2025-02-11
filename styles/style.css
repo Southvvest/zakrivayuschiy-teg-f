@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-family-basic), sans-serif;
-  font-variation-settings: var(--font-weight-small);
+  font-variation-settings: 'wght' var(--font-weight-small);
   background-image: var(--bg-image);
   background-attachment: fixed;
   background-size: cover;
@@ -96,6 +96,7 @@
   font-size: var(--font-size-title);
   padding-inline: 10px;
   padding-block: clamp(0.167rem, 0rem + 100vh, 0.278rem);
+  font-variation-settings: 'wght' var(--font-weight-big);
 }
 
 .memories-block__image {
@@ -116,7 +117,6 @@
   --font-height-text: 14px;
   font-size: var(--font-size-text);
   line-height: var(--font-height-text);
-  font-variation-settings: 'wght' (var(--font-weight-small));
   font-weight: var(--font-weight-small);
   mix-blend-mode: hard-light;
   background-blend-mode: hard-light;
