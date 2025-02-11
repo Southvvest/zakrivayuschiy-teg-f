@@ -49,7 +49,7 @@
   padding-block-start: 6.25rem;
   padding-block-end: 6.25rem;
   min-inline-size: var(--inline-size-small);
-  max-inline-size: var(--inline-size-large);
+  max-inline-size: 100%;
 }
 
 .header__logo {
@@ -116,6 +116,7 @@
   --font-height-text: 14px;
   font-size: var(--font-size-text);
   line-height: var(--font-height-text);
+  font-variation-settings: 'wght' (var(--font-weight-small));
   font-weight: var(--font-weight-small);
   mix-blend-mode: hard-light;
   background-blend-mode: hard-light;
@@ -181,7 +182,7 @@
 
 /* Блок для стилей подвала страницы */
 
-.footer{
+.footer {
   display: grid;
   padding-block-start: clamp(3.25rem, 0rem + 100vh, 3.125rem);
   padding-block-end: clamp(6.25rem, 0rem + 100vh, 6.438rem);
@@ -283,6 +284,9 @@ body:has(.dialog[open]) {
 /* Стили для адаптации страницы к большему размеру экрана */
 
 @media (width > 1200px) {
+  .header {
+    min-inline-size: var(--inline-size-large);
+  }
   .header__logo {
     min-block-size: clamp(22.813rem, -46rem + 300vh, 23rem);
   }

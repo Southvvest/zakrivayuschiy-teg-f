@@ -8,7 +8,7 @@
     --bg-color: #fff;
     --fill-contur-color: #000;
     --fill-filling-color: #F00;
-    --inline-size-small: clamp(22.5rem, -47.813rem + 300vw, 23.438rem);
+    --inline-size-small: clamp(22.813rem, 0.817rem + 93.846vw, 41.875rem);
     --inline-size-large: clamp(43.5rem, 0rem + 100vw, 43.75rem);
     --font-family-basic: 'Inter', sans-serif;
     --font-family-decoration: 'PressStart2P', sans-serif;
