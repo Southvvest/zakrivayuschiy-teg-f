@@ -31,6 +31,7 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  transition: box-shadow 0.3s;
 }
 
 .button__text {
@@ -58,7 +59,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  min-block-size: clamp(18.167rem, 0rem + 100vh, 20.444rem);
+  padding-block: clamp(7.25rem, 0rem + 100vh, 7.5rem);
   font-family: var(--font-family-decoration), sans-serif;
   border: var(--border-element);
   background-color: var(--bg-color);;
@@ -143,13 +144,13 @@
   padding-block: 25px;
   display: flex;
   flex-direction: column;
-  gap: 27px;
+  gap: 26px;
   font-family: inherit;
   font-size: var(--font-size-text);
 }
 
 .memories-block__button {
-  padding-block-end: 22px;
+  padding-block-end: 27px;
   padding-inline-end: 25px;
   display: flex;
   justify-content: flex-end;
@@ -159,12 +160,20 @@
   display: flex;
   align-items: center;
   background-color: inherit;
+  gap: 3px;
 }
 
 .like-icon-button {
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+  padding: 0;
+  block-size: 42px;
+  inline-size: 42px;
+  box-sizing: border-box;
   background-color: inherit;
-  transform-origin: 0 0;
+  transition: outline 0.3s;
 }
 
 .like-icon {
@@ -182,15 +191,14 @@
 
 /* Блок для стилей подвала страницы */
 
-.footer {
+.bottom-block {
   display: grid;
-  padding-block-start: clamp(3.25rem, 0rem + 100vh, 3.125rem);
   padding-block-end: clamp(6.25rem, 0rem + 100vh, 6.438rem);
   min-inline-size: var(--inline-size-small);
   max-inline-size: var(--inline-size-large);
 }
 
-.footer-button {
+.bottom-block-button {
   min-inline-size: clamp(19.063rem, 0rem + 100vw, 19.188rem);
   min-block-size: clamp(5.25rem, 0rem + 100vh, 5.313rem);
   background-color: var(--bg-color);
@@ -203,7 +211,7 @@
   z-index: 1;
 }
 
-.footer-button .button__text {
+.bottom-block-button .button__text {
   border: none;
 }
 
@@ -227,17 +235,15 @@
   display: flex;
   flex-direction: column;
   justify-self: center;
-  top: calc(50% - 102px);
+  top: calc(50% - 98px);
   border: var(--border-element);
   font-size: var(--font-size-button);
   min-inline-size: clamp(20.938rem, 0rem + 100vw, 21.313rem);
   max-inline-size: clamp(15.063rem, 0rem + 100vw, 15.813rem);
-  min-block-size: clamp(11.563rem, 0rem + 100vh, 11.938rem);
   padding-inline: clamp(2.438rem, 0rem + 100vw, 2.5rem);
   padding-block: clamp(1.75rem, 0rem + 100vh, 1.875rem);
   font-family: var(--font-family-decoration, sans-serif);
   gap: 30px;
-  overflow: hidden;
 }
 
 .dialog-messege {
@@ -288,7 +294,7 @@ body:has(.dialog[open]) {
     min-inline-size: var(--inline-size-large);
   }
   .header__logo {
-    min-block-size: clamp(22.813rem, -46rem + 300vh, 23rem);
+    padding-block: clamp(7.75rem, 0rem + 100vh, 8rem);
   }
   .header__title {
     font-weight: 400;
@@ -303,7 +309,7 @@ body:has(.dialog[open]) {
   .memories-block__image-title {
     right: 25px;
   }
-  .footer-button {
+  .bottom-block-button {
     min-inline-size: clamp(20.313rem, 0rem + 100vw, 20.938rem);
     min-block-size: clamp(3.25rem, 0rem + 100vh, 3.438rem);
     flex-direction: row;
@@ -315,7 +321,7 @@ body:has(.dialog[open]) {
     width: 21px;
     height: 21px;
   }
-  .dialog {
+  .dialog[open] {
     max-inline-size: clamp(22.063rem, 0rem + 100vw, 22.188rem);
     padding-inline: clamp(1.75rem, 0rem + 100vw, 1.875rem);
   }
@@ -357,17 +363,12 @@ body:has(.dialog[open]) {
   filter: hue-rotate(0.2turn) opacity(75%);
 }
 
-.footer-button:focus,
-.dialog-button:focus,
-.memories-block__like-button:focus {
+.button:focus {
   outline: none;
 }
 
-.footer-button:focus-visible,
-.dialog-button:focus-visible,
-.memories-block__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px #000;
-  transition: box-shadow 0.3s;
 }
 
 .button::before {
@@ -377,11 +378,11 @@ body:has(.dialog[open]) {
   block-size: 100%;
   position: absolute;
   left: -100%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .button:hover::before {
   transform: scaleX(5);
-  transition: transform 0.5s ease-in-out;
 }
 
 .like-icon-button:focus {
@@ -391,7 +392,6 @@ body:has(.dialog[open]) {
 .like-icon-button:focus-visible {
   outline: var(--border-element);
   outline-offset: -4px;
-  transition: outline 0.3s;
 }
 
 .sparks {
@@ -449,10 +449,12 @@ body:has(.dialog[open]) {
 
 .like-icon.is-liked .heart {
   animation: move-button-icon 0.3s 0.1s ease-in;
+  transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
   animation: sparks-button-icon 0.3s 0.3s ease-in;
+  transform-origin: center;
 }
 
 /* Конец блока визуальных эфектов */
